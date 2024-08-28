@@ -1,0 +1,422 @@
+/* Google Fonts Link */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Oswald:wght@300;400;500;600;700&display=swap');
+/* Google Fonts Link End */
+
+/* Common CSS */
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+}
+p {
+    margin-bottom: 0;
+}
+ul {
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+img {
+    vertical-align: middle;
+}
+:root {
+    --color1: #0872b9;
+    --color2: #5bc5f4;
+    --oswald: 'Oswald', sans-serif;
+    --sans: 'Open Sans', sans-serif;
+}
+/* Common CSS End */
+
+/* ========================================= */
+
+/* Preloader */
+.preloader{
+    height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.spinner {
+    width: 72px;
+    height: 72px;
+    display: grid;
+    animation: spinner-plncf9 4s infinite;
+ }
+ 
+ .spinner::before,
+ .spinner::after {
+    content: "";
+    grid-area: 1/1;
+    border: 11.5px solid;
+    border-radius: 50%;
+    border-color: #0872b9 #0872b9 #0000 #0000;
+    mix-blend-mode: darken;
+    animation: spinner-plncf9 1s infinite linear;
+ }
+ 
+ .spinner::after {
+    border-color: #0000 #0000 #dbdcef #dbdcef;
+    animation-direction: reverse;
+ }
+ 
+ @keyframes spinner-plncf9 {
+    100% {
+       transform: rotate(1turn);
+    }
+ }
+/* Preloader End */
+
+/* ========================================= */
+
+/* Back to top */
+.backToTop {
+    bottom: 20px;
+    left: 20px;
+    display: none;
+}
+/* Back to top End*/
+
+/* ========================================= */
+
+/* Welcome Area */
+.welcomeArea {
+    background: var(--color1);
+}
+.welcomeIcon li a {
+    color: #fff;
+}
+.welcomeIcon li a:hover {
+    color: #353535;
+}
+/* Welcome Area End */
+
+/* ========================================= */
+
+/* Menu Area */
+.nav-link {
+    font-weight: 500;
+    color: #000;
+}
+.nav-link:hover {
+    color: var(--color1);
+}
+
+.nav_bg{
+    background: #fff;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+}
+.stickyTop {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: var(--color1);
+    animation: shutterTop 1s ease-in-out;
+}
+@keyframes shutterTop {
+    from {
+        transform: translateY(-300px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+.stickyTop .nav-link {
+    color: #fff;
+}
+/* Menu Area End */
+
+/* ========================================= */
+
+/* Hero Area */
+.heroPart {
+    background: url(../img/home-bg.jpg) no-repeat center;
+    background-size: cover;
+    padding: 140px 0;
+}
+.heroCon h2 {
+    font-size: 40px;
+}
+.heroCon h1 {
+    font-size: 52px;
+}
+.heroBtn a {
+    background: transparent;
+    border-radius: 0;
+    border-color: #fff;
+    font-family: var(--oswald);
+}
+.heroBtn a:hover {
+    background-color: var(--color1);
+    border-color: var(--color1);
+}
+/* Hero Area End */
+
+/* ========================================= */
+
+/* About Area */
+.aboutPart {
+    padding: 60px 0 0;
+}
+.line01 {
+    height: 1px;
+    width: 47px;
+    background: var(--color1);
+}
+.line02 {
+    height: 1px;
+    width: 3px;
+    background: var(--color1);
+}
+.line03 {
+    height: 1px;
+    width: 2px;
+    background: var(--color1);
+}
+.line04 {
+    height: 1px;
+    width: 1px;
+    background: var(--color1);
+}
+.aboutHead {
+    margin-bottom: 40px;
+}
+.aboutCon p {
+    color: #555;
+}
+/* About Area End */
+
+/* ========================================= */
+
+/* Service Area */
+.servicePart {
+    padding: 60px 0 0;
+}
+.serviceCon {
+    background-color: #f1f1f1;
+    position: relative;
+    transition: .4s;
+}
+.serviceIcon {
+    height: 80px;
+    width: 80px;
+    background-color: #f1f1f1;;
+    border-radius: 50%;
+    border: 8px double white;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .4s;
+}
+.serviceCon:hover .serviceIcon {
+    background: var(--color2);
+}
+.serviceCon:hover {
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+/* Service Area End */
+
+/* ========================================= */
+
+/* Portfolio Area */
+.portfolioPart {
+    padding: 60px 0 0;
+}
+.portOverlay {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: .4s;
+}
+.portOverlay a {
+    height: 40px;
+    width: 40px;
+    background: var(--color2);
+    border-radius: 50%;
+    color: #fff;
+}
+.portfolioCon:hover .portOverlay {
+    opacity: 1;
+}
+/* Portfolio Area End */
+
+/* ========================================= */
+
+/* Countdown Area */
+.countdownCon {
+    background-color: var(--color2);
+}
+/* Countdown Area End */
+
+/* ========================================= */
+
+/* Team Area */
+.teamPart {
+    padding: 60px 0 0;
+}
+.teamImg {
+    overflow: hidden;
+    transition: .5s;
+}
+.teamImg:hover {
+    box-shadow: 0 0 26px 5px rgba(0, 0, 0, 0.2);
+}
+.teamImg:hover ~ h4 {
+    color: var(--color2);
+}
+.teamImgOverlay {
+    height: 100%;
+    width: 0;
+    background: rgba(0, 0, 0, 0.6);
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: .4s;
+}
+.teamImg:hover .teamImgOverlay {
+    opacity: 1;
+    width: 33%;
+}
+.teamImgOverlay ul li a {
+    height: 50px;
+    width: 50px;
+    background: transparent;
+    margin: 12px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    color: #fff;
+    transition: .4s;
+}
+.teamImgOverlay ul li a:hover {
+    background: var(--color2);
+    border-color: var(--color2);
+}
+.teamImgOverlay ul li a i {
+    font-size: larger;
+}
+/* Team Area End */
+
+/* ========================================= */
+
+/* Counter Up Area */
+.countdownCon span {
+    font-family: var(--oswald);
+}
+/* Counter Up Area End */
+
+/* ========================================= */
+
+/* Testimonial Area */
+.testMonPart{
+    padding: 60px 0;
+}
+.testMonCon {
+    background: #f1f1f1;
+}
+.shape {
+    height: 40px;
+    width: 40px;
+    background: #f1f1f1;
+    top:-20px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    z-index: -1;
+}
+.testMonIcon li a i {
+    color: var(--color2);
+}
+.bottomPart p {
+    font-size: 15px;
+}
+/* Testimonial Area End */
+
+/* ========================================= */
+
+/* Bottom Area */
+.bottomPart {
+    background: #353535;
+    padding: 20px 0;
+}
+.bottomIcon {
+    height: 40px;
+    width: 40px;
+    background: var(--color2);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+}
+.bottomCon ul li a {
+    color: #fff;
+    padding: 5px 0;
+    display: block;
+    transition: .4s;
+}
+.bottomCon ul li a:hover {
+    color: var(--color2);
+}
+/* Bottom Area End */
+
+/* ========================================= */
+
+/* Footer Area */
+.footerPart {
+    background: #555;
+}
+.footerCon a {
+    color: var(--color2);
+}
+/* Footer Area End */
+
+/* ========================================= */
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .heroPart {
+        background: url(../img/home-bg.jpg) no-repeat top left;
+        background-size: cover;
+        padding: 140px 0;
+    }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .teamImgOverlay ul li a {
+        height: 35px;
+        width: 35px;
+        background: transparent;
+        margin: 12px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        color: #fff;
+        transition: .4s;
+    }
+    .teamImgOverlay ul li a:hover {
+        background: var(--color2);
+        border-color: var(--color2);
+    }
+    .teamImgOverlay ul li a i {
+        font-size: large;
+    }
+}
