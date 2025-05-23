@@ -11,7 +11,7 @@ new VenoBox({
 
 (() => {
     // Specify the deadline date
-    const deadlineDate = new Date("December 31, 2024 23:59:59").getTime();
+    const deadlineDate = new Date("December 31, 2025 23:59:59").getTime();
 
     // Cache all countdown boxes into consts
     const countdownDays = document.querySelector(".countdown__days .number");
